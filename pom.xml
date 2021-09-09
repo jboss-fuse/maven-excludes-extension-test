@@ -43,7 +43,24 @@
         </dependencies>
     </dependencyManagement>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/gnodet/maven-exclude-extension</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
     <build>
+        <extensions>
+            <extension>
+                <groupId>org.jboss.fuse.maven</groupId>
+                <artifactId>maven-exclude-extension</artifactId>
+                <version>0.1.0</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
